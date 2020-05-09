@@ -1,0 +1,6 @@
+[submodule ".vim/pack/tpope/start"]
+	path = .vim/pack/tpope/start
+	url = git@github.com:bleepster/vim-sensible.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git@github.com:bleepster/ohmyzsh.git
