@@ -13,3 +13,13 @@ if &term =~ '256color'
     " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
     set t_ut=
 endif
+
+" routine for toggling dark/light mode based on time, taken from:
+" https://stackoverflow.com/a/7589970
+if strftime("%H") > 19
+    set background=dark
+else
+    set background=light
+endif
+colorscheme gruvbox
+let g:gruvbox_contrast_light="soft"
