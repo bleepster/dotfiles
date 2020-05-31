@@ -33,3 +33,9 @@ if command -v pyenv 1>/dev/null 2>&1;
 then
     eval "$(pyenv init -)"
 fi
+
+command -v rustc 1>/dev/null 2>&1
+if [ $? -eq 1 ];
+then
+    [ -s "${HOME}/.cargo/bin/rustc" ] && export PATH=${PATH}:${HOME}/.cargo/bin
+fi
