@@ -10,3 +10,6 @@
 [submodule ".vim/pack/plugins/start/rust.vim"]
 	path = .vim/pack/plugins/start/rust.vim
 	url = git@github.com:bleepster/rust.vim.git
+[submodule "pyenv"]
+	path = pyenv
+	url = git@github.com:bleepster/pyenv.git
