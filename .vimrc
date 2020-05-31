@@ -4,6 +4,7 @@ runtime! plugin/sensible.vim
 set cursorline
 set number
 set termguicolors
+filetype plugin on
 
 " shamelessly copy-pasted from:
 " https://stackoverflow.com/questions/6427650/vim-in-tmux-background-color-changes-when-paging
