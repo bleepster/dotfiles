@@ -7,3 +7,6 @@
 [submodule ".vim/pack/default/start/gruvbox"]
 	path = .vim/pack/default/start/gruvbox
 	url = git@github.com:bleepster/gruvbox.git
+[submodule ".vim/pack/plugins/start/rust.vim"]
+	path = .vim/pack/plugins/start/rust.vim
+	url = git@github.com:bleepster/rust.vim.git
