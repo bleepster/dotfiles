@@ -1,5 +1,5 @@
 [submodule ".vim/pack/tpope/start"]
-	path = .vim/pack/tpope/start
+	path = .vim/pack/default/start/tpope
 	url = git@github.com:bleepster/vim-sensible.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
@@ -8,12 +8,12 @@
 	path = .vim/pack/default/start/gruvbox
 	url = git@github.com:bleepster/gruvbox.git
 [submodule ".vim/pack/plugins/start/rust.vim"]
-	path = .vim/pack/plugins/start/rust.vim
+	path = .vim/pack/default/start/rust.vim
 	url = git@github.com:bleepster/rust.vim.git
 [submodule "pyenv"]
 	path = .pyenv
 	url = git@github.com:bleepster/pyenv.git
 [submodule ".vim/pack/coc/start"]
-	path = .vim/pack/coc/start
+	path = .vim/pack/default/start/coc
 	url = git@github.com:bleepster/coc.nvim.git
 	branch = release
