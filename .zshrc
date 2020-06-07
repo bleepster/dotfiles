@@ -39,3 +39,5 @@ if [ $? -eq 1 ];
 then
     [ -s "${HOME}/.cargo/bin/rustc" ] && export PATH=${PATH}:${HOME}/.cargo/bin
 fi
+
+[ -d "${HOME}/.local/arcanist/bin" ] && export PATH=${PATH}:${HOME}/.local/arcanist/bin
