@@ -17,17 +17,9 @@ if &term =~ '256color'
     set t_ut=
 endif
 
+set background=dark
 colorscheme gruvbox
-
-" routine for toggling dark/light mode based on time, taken from:
-" https://stackoverflow.com/a/7589970
-if strftime("%H") > 18
-    set background=dark
-    let g:gruvbox_contrast_dark="medium"
-else
-    set background=light
-    let g:gruvbox_contrast_light="hard"
-endif
+let g:gruvbox_contrast_dark="soft"
 
 " ----------------------------- coc.vim settings --------------------------- "
 " NOTE: The following are taken from the repo's example configuration        "
