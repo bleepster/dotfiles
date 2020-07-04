@@ -1,0 +1,19 @@
+#+STARTUP: showall
+
+* Packages
+** use-package
+** gruvbox-theme
+** evil
+* Toggle Themes
+** toggle themes using a key binding [[https://www.emacswiki.org/emacs/ColorThemes#toc16][(see EmacsWiki)]]
+** toggle themes between night and day, [[https://www.emacswiki.org/emacs/ColorThemes#toc17][(see EmacsWiki)]]
+   - just search for sites that provide longitude/latitude for your location
+* Windows
+** MELPA
+  - `https` does not work, so the url must be set to `http`, [[https://melpa.org/#/getting-started][(see MELPA getting started page)]] 
+  - initially, it loading of package lists takes time
+** default directory
+  - set the default directory in the shortcut, [[https://stackoverflow.com/a/60482][(see this StackOverflow answer)]]
+* Linux
+* References
+  - [[https://cestlaz.github.io/stories/emacs/][C'est la Z]]
