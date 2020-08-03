@@ -14,6 +14,13 @@
   - initially, it loading of package lists takes time
 ** default directory
   - set the default directory in the shortcut, [[https://stackoverflow.com/a/60482][(see this StackOverflow answer)]]
+  - On Windows 10, HOME directory or `~/.emacs.d` is in `C:\Users\lapus.er\AppData\Roaming\.emacs.d`
+* Saving Session
+** Load previously opened buffers automatically
+  - docs, [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Emacs-Sessions.html][GNU Emacs]]
+  - quirks when combined with `theme-changer`, so don't include themes... [[https://superuser.com/questions/859761/prevent-emacs-desktop-save-from-holding-onto-theme-elements][StackOverflow dicussion]]
 * Linux
+* Python
+  - Emacs Wiki, [[https://www.emacswiki.org/emacs/PythonProgrammingInEmacs][Python Programming in Emacs]]
 * References
   - [[https://cestlaz.github.io/stories/emacs/][C'est la Z]]

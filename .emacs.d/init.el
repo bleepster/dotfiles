@@ -33,6 +33,8 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(require 'use-package)
+
 (use-package evil
   :ensure t
   :config
@@ -51,6 +53,12 @@
   :config
   (change-theme 'gruvbox-light-hard 'gruvbox-dark-soft))
 
+(use-package org-bullets
+  :ensure t
+  :hook (org-mode . org-bullets-mode)
+  :config
+  (setq org-bullet-list '("◉" "◎" "❖" "○" "►" "◇" "✸")))
+
 (set-default-font "Iosevka Curly 12")
 
 (setq ido-enable-flex-matching t)
@@ -58,3 +66,10 @@
 (ido-mode 1)
 
 (defalias 'list-buffers 'ibuffer)
+
+(custom-set-variables
+ '(desktop-save t)
+ '(desktop-restore-frames nil)
+ '(desktop-path (list "~/.emacs.d/"))
+ '(desktop-dirname "~/.emacs.d/"))
+(desktop-save-mode 1)
