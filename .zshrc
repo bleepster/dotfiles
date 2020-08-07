@@ -19,10 +19,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# user configuration
 export EDITOR='vim'
 
-# Environment specific configuration
+# environment-specific configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
@@ -41,3 +41,8 @@ then
 fi
 
 [ -d "${HOME}/.local/arcanist/bin" ] && export PATH=${PATH}:${HOME}/.local/arcanist/bin
+
+# host-specific settings
+export PYENV_VERSION=
+export DISPLAY=
+
