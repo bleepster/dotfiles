@@ -1,22 +1,11 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (theme-changer which-key use-package gruvbox-theme evil))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-;; my configuration
-
 (setq inhibit-startup-message t)
+(setq visible-bell t)
+
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
+(tooltip-mode -1)
+(set-fringe-mode 10)
+(menu-bar-mode -1)
 
 (setq calendar-location-name "Cebu, PH")
 (setq calendar-latitude 10)
@@ -25,15 +14,18 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-	     '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
 (require 'use-package)
+(setq use-package-always-ensure t)
 
 (use-package evil
   :ensure t
@@ -52,6 +44,13 @@
   :ensure t
   :config
   (change-theme 'gruvbox-light-hard 'gruvbox-dark-soft))
+
+;; icons for doom-modeline
+(use-package all-the-icons)
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
 
 ;; emacs snippet from https://gitlab.com/spudlyo
 (use-package org
@@ -97,7 +96,7 @@
 (use-package htmlize
   :ensure t)
 
-(set-default-font "Iosevka Curly 12")
+(set-frame-font "Iosevka Term Curly 12")
 
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -116,8 +115,21 @@
 (defalias 'list-buffers 'ibuffer)
 
 (custom-set-variables
- '(desktop-save t)
- '(desktop-restore-frames nil)
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(desktop-dirname "~/.emacs.d/" t)
  '(desktop-path (list "~/.emacs.d/"))
- '(desktop-dirname "~/.emacs.d/"))
+ '(desktop-restore-frames nil)
+ '(desktop-save t)
+ '(package-selected-packages
+   (quote
+    (doom-modeline which-key use-package theme-changer org-bullets htmlize gruvbox-theme evil))))
 (desktop-save-mode 1)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
