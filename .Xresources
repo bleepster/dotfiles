@@ -1,0 +1,44 @@
+URxvt*font: xft:Iosevka Term Curly:regular:size=11
+URxvt*imFont: xft:Iosevka Term Curly:italic:size=11
+URxvt*boldFont: xft:Iosevka Term Curly:bold:size=11
+URxvt*italicFont: xft:Iosevka Term Curly:italic:size=11
+URxvt*boldItalicFont: xft:Iosevka Term Curly:bold italic:size=11
+URxvt*depth: 32
+URxvt*borderless: 1
+URxvt*scrollBar: false
+URxvt*termName: rxvt-unicode-256color
+
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+*background: #282828
+*foreground: #ebdbb2
+
+*color0: #282828
+*color8: #928374
+
+*color1: #928374
+*color9: #fb4934
+
+*color2: #98971a
+*color10: #b8bb26
+
+*color3: #d79921
+*color11: #fabd2f
+
+*color4: #458588
+*color12: #83a598
+
+*color5: #b16286
+*color13: #d3869b
+
+*color6: #689d6a
+*color14: #8ec07c
+
+*color7: #a89984
+*color15: #ebdbb2
