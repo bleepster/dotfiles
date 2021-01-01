@@ -1,5 +1,5 @@
 # zsh-specific configuration
-export ZSH="/home/erl/.oh-my-zsh"
+export ZSH="/home/${USER}/.oh-my-zsh"
 ZSH_THEME="gallifrey"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
