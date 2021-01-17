@@ -4,9 +4,16 @@ runtime! plugin/sensible.vim
 set cursorline
 set number
 set termguicolors
+set colorcolumn=80
+set scrolloff=12
 
 set statusline=%f\ %h%w%m%r
 set statusline+=%=%(%l,%c%V\ %=\ %P%)
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
 
 " shamelessly copy-pasted from:
 " https://stackoverflow.com/questions/6427650/vim-in-tmux-background-color-changes-when-paging
