@@ -1,3 +1,3 @@
 {
-    "rust-analyzer.serverPath": "/home/erl/.local/bin/rust-analyzer"
+    "rust-analyzer.serverPath": "~/.local/bin/rust-analyzer"
 }
