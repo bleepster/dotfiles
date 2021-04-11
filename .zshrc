@@ -25,6 +25,6 @@ then
 fi
 
 # host-specific settings
-export PYENV_VERSION=3.8.3
+# export PYENV_VERSION="3.8.3" -- only needed to overrided `pyenv global ..`
 export DISPLAY=:0
 

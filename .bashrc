@@ -29,6 +29,10 @@ PS1='\u@\h:\w\$ '
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 # Alias definitions.
@@ -51,3 +55,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# setup keychain for ssh
+/usr/bin/keychain --nogui $HOME/.ssh/id_ed25519
+source $HOME/.keychain/$HOSTNAME-sh
+source "$HOME/.cargo/env"
+
+export GDK_SCALE=2
