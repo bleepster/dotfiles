@@ -13,7 +13,3 @@
 [submodule "pyenv"]
 	path = .pyenv
 	url = git@github.com:bleepster/pyenv.git
-[submodule ".vim/pack/coc/start"]
-	path = .vim/pack/default/start/coc
-	url = git@github.com:bleepster/coc.nvim.git
-	branch = release
