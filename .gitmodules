@@ -7,9 +7,27 @@
 [submodule ".vim/pack/default/start/gruvbox"]
 	path = .vim/pack/default/start/gruvbox
 	url = git@github.com:bleepster/gruvbox.git
-[submodule ".vim/pack/plugins/start/rust.vim"]
-	path = .vim/pack/default/start/rust.vim
-	url = git@github.com:bleepster/rust.vim.git
 [submodule "pyenv"]
 	path = .pyenv
 	url = git@github.com:bleepster/pyenv.git
+[submodule ".local/share/nvim/site/pack/default/start/nvim-lspinstall"]
+	path = .local/share/nvim/site/pack/default/start/nvim-lspinstall
+	url = git@github.com:bleepster/nvim-lspinstall.git
+[submodule ".local/share/nvim/site/pack/default/start/nvim-lspconfig"]
+	path = .local/share/nvim/site/pack/default/start/nvim-lspconfig
+	url = git@github.com:bleepster/nvim-lspconfig.git
+[submodule ".local/share/nvim/site/pack/default/start/completion-nvim"]
+	path = .local/share/nvim/site/pack/default/start/completion-nvim
+	url = git@github.com:bleepster/completion-nvim.git
+[submodule ".local/share/nvim/site/pack/default/start/vim-gitgutter"]
+	path = .local/share/nvim/site/pack/default/start/vim-gitgutter
+	url = git@github.com:bleepster/vim-gitgutter.git
+[submodule ".local/share/nvim/site/pack/default/start/rust.vim"]
+	path = .local/share/nvim/site/pack/default/start/rust.vim
+	url = git@github.com:bleepster/rust.vim.git
+[submodule ".local/share/nvim/site/pack/default/start/vim-sensible"]
+	path = .local/share/nvim/site/pack/default/start/vim-sensible
+	url = git@github.com:bleepster/vim-sensible.git
+[submodule ".local/share/nvim/site/pack/default/start/gruvbox"]
+	path = .local/share/nvim/site/pack/default/start/gruvbox
+	url = git@github.com:bleepster/gruvbox.git
