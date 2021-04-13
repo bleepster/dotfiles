@@ -11,10 +11,16 @@
 (set-fringe-mode 10)
 (menu-bar-mode -1)
 
+;; specify a frame size
+(when window-system (set-frame-size (selected-frame) 80 40))
+
 ;; inform emacs of where I am, this will be used by the theme-changer below
 (setq calendar-location-name "Cebu, PH")
 (setq calendar-latitude 10)
 (setq calendar-longitude 125)
+
+;; set Iosevka as the main font
+(set-frame-font "Iosevka Term Curly 12")
 
 ;; display line/column numbers everywhere
 (column-number-mode)
@@ -59,6 +65,7 @@
   (change-theme 'gruvbox-light-hard 'gruvbox-dark-soft))
 
 ;; install/enable package: all the icons, required by doom-modeline
+;; reuiqres `M-x all-the-icons-install-fonts` on first run
 (use-package all-the-icons)
 
 ;; install/enable package: doom-modeline
@@ -100,20 +107,16 @@
    '((shell . t)
      (python . t))))
 
-
 ;; install/enable package: org-bullets
 (use-package org-bullets
   :ensure t
   :hook (org-mode . org-bullets-mode)
   :config
-  (setq org-bullet-list '("◉" "◎" "❖" "○" "►" "◇" "✸")))
+  (setq org-bullet-list '("◉" "☯" "✜" "☯" "►" "☯" "❖" "☯" "○" "☯" "◇" "☯" "✸")))
 
 ;; install/enable package: htmlize
 (use-package htmlize
   :ensure t)
-
-;; set Iosevka as the main font
-(set-frame-font "Iosevka Term Curly 12")
 
 ;; enable ido mode
 (setq ido-enable-flex-matching t)
@@ -137,14 +140,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(desktop-dirname "~/.emacs.d/" t)
- '(desktop-path (list "~/.emacs.d/"))
- '(desktop-restore-frames nil)
- '(desktop-save t)
  '(package-selected-packages
-   (quote
-    (doom-modeline which-key use-package theme-changer org-bullets htmlize gruvbox-theme evil))))
-(desktop-save-mode 1)
+   '(htmlize org-bullets doom-modeline all-the-icons theme-changer gruvbox-theme which-key evil use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
