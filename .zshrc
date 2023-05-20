@@ -5,26 +5,24 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # shell environment configuration
-export EDITOR='vim'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+export PATH=$HOME/.local/bin:$PATH
 
-export PYENV_ROOT="$HOME"/.pyenv
-export PATH=${PYENV_ROOT}/bin:${PATH}
-if command -v pyenv 1>/dev/null 2>&1;
-then
+export EDITOR='vi'
+if [ -f "${HOME}/.local/bin/nvim" ]; then
+    alias vim="nvim"
+    export EDITOR='nvim'
+fi
+
+if [ -d "${HOME}/.pyenv" ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 fi
 
-command -v rustc 1>/dev/null 2>&1
-if [ $? -eq 1 ];
-then
-    [ -s "${HOME}/.cargo/bin/rustc" ] && export PATH=${PATH}:${HOME}/.cargo/bin
-fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# host-specific settings
-# export PYENV_VERSION="3.8.3" -- only needed to overrided `pyenv global ..`
-export DISPLAY=:0
-
+export CARGO_DIR="${HOME}/.cargo"
+export PATH="${CARGO_DIR}/bin:${PATH}"
